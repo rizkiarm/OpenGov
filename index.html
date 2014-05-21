@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" ng-app="OpenGov">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Open Government</title>
+
+	<!-- Foundation CSS. -->
+ 	<link rel="stylesheet" href="vendor/css/normalize.css">
+	<link rel="stylesheet" href="vendor/css/foundation.min.css">
+
+	<!-- Font Awesome CSS. -->
+ 	<link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+
+</head>
+<body>
+	<!-- BODY CONTENT START -->
+	<div class="nav"><h1>Open Government</h1></div>
+
+	<div class="content" ng-view="">
+
+	</div>
+
+	<div class="footer"></div>
+
+	<!-- BODY CONTENT END -->
+
+	<!-- Initialize the jQuery. -->
+	<script src="vendor/js/jquery.min.js"></script>
+
+	<!-- Initialize the AngularJS. -->
+	<script src="vendor/js/angular.min.js"></script>
+	<script src="vendor/js/angular-route.min.js"></script>
+	<!-- Initialize the Apps. -->
+	<script src="app/app.js"></script>
+	<script src="app/controllers/controller.js"></script>
+
+	<!-- Initialize the Foundation JS. -->
+  	<script src="vendor/js/foundation.min.js"></script>
+  	<script>
+    	$(document).foundation();
+  	</script>
+</body>
+</html>
