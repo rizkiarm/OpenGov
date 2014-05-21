@@ -98,7 +98,6 @@ table {
 	CONTENT 
  ================================================= */
 .row {
-	padding: 0 10px;
 }
 .section {
 	width: 100%;
@@ -109,7 +108,7 @@ table {
 	text-align: center;
 	height: 500px;
 }
-.section.home h1, p {
+.section.home h1, .section.home p {
 	color:#fff;
 }
 .section.vertical-middle > .section-content {
