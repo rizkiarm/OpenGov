@@ -17,7 +17,6 @@ OpenGov.controller('MapController', function($scope, $location, DataFactory){
     }
 
     $scope.showDetails = function() {
-    	//redirectTo : '/'+id+'/details';
     	var detailID = this.id;
     	$scope.$apply(function() { 
     		$location.path("/data/"+detailID+"/details"); 
