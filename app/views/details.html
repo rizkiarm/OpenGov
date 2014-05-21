@@ -52,14 +52,14 @@
 <div class="section details-info">
 	<div class="row">
 		<div class="medium-9 column">
-			<h3>Description</h3>
+			<h2><small>Description</small></h2>
 			<p>{{ detailsData.long_desc }}</p>
 		</div>
 		<div class="medium-3 column">
-			<h3>Initiator</h3>
-			<p>{{ detailsData.initiator }}</p>
-			<h3>Funding</h3>
-			<p>{{ detailsData.funding }}</p>
+			<h3><small>Initiator</small></h3>
+			<h3>{{ detailsData.initiator }}</h3>
+			<h3><small>Funds</small></h3>
+			<h3>{{ detailsData.funding }}</h3>
 		</div>
 	</div>
 </div>
@@ -67,7 +67,7 @@
 <div class="section details-photos">
 	<div class="row">
 		<div class="medium-12 column">
-			<h3>Photos</h3>
+			<h2><small>Photos</small></h2>
 			<ul>
 				<li ng-repeat="photo in detailsData.photos"><img style="width:200px;" src="{{ photo }}" /></li>
 			</ul>
