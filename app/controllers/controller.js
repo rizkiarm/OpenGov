@@ -1,5 +1,9 @@
-OpenGov.controller('HomeController', function($scope){
+OpenGov.controller('HomeController', function($scope, $location){
 
+	$scope.go = function(url){
+		var url = url;
+    	$location.path(url);
+	}
 	
 });
 
