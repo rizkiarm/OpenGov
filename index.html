@@ -15,16 +15,54 @@
 	<!-- Font Awesome CSS. -->
  	<link rel="stylesheet" href="vendor/css/font-awesome.min.css">
 
+ 	<!-- Apps Style -->
+ 	<link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 <body>
 	<!-- BODY CONTENT START -->
-	<div class="nav"><h1>Open Government</h1></div>
+	<div class="nav-bar">
+		<div class="contain-to-grid sticky nav-custom">
+			<nav class="top-bar" data-topbar="">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="#">Open Government</a></h1>
+					</li>
+					<li class="toggle-topbar menu-icon"><a href="#"></a></li>
+				</ul>
 
+				<section class="top-bar-section">
+					<ul class="right">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Open Info</a></li>
+						<li><a href="#">Democracy</a></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+	</div>
+	
 	<div class="content" ng-view="">
 
 	</div>
 
-	<div class="footer"></div>
+	<br />
+	<div class="footer">
+		<div class="row">
+			<div class="medium 12-column">
+				<section>
+					<ul class="left">
+						<li><a href="#">Copyright &copy; OpenGov Initiative 2014</a></li>
+					</ul>
+					<ul class="right inline-list">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
 
 	<!-- BODY CONTENT END -->
 
@@ -37,6 +75,8 @@
 	<!-- Initialize the Apps. -->
 	<script src="app/app.js"></script>
 	<script src="app/controllers/controller.js"></script>
+	<script src="app/directives/directive.js"></script>
+	<script src="app/factories/factory.js"></script>
 
 	<!-- Initialize the Foundation JS. -->
   	<script src="vendor/js/foundation.min.js"></script>
