@@ -15,6 +15,9 @@
 	<!-- Font Awesome CSS. -->
  	<link rel="stylesheet" href="vendor/css/font-awesome.min.css">
 
+ 	<!-- Other CSS -->
+
+
  	<!-- Apps Style -->
  	<link rel="stylesheet" href="assets/css/style.css">
 
@@ -34,9 +37,9 @@
 
 				<section class="top-bar-section">
 					<ul class="right">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Open Info</a></li>
-						<li><a href="#">Democracy</a></li>
+						<li><a href="#/">Home</a></li>
+						<li><a href="#/maps">Open Information</a></li>
+						<li><a href="#/democracy">Democracy</a></li>
 					</ul>
 				</section>
 			</nav>
@@ -53,7 +56,7 @@
 			<div class="medium 12-column">
 				<section>
 					<ul class="left">
-						<li><a href="#">Copyright &copy; OpenGov Initiative 2014</a></li>
+						<li><a href="#">OpenGov Initiative 2014</a></li>
 					</ul>
 					<ul class="right inline-list">
 						<li><a href="#">About</a></li>
@@ -69,13 +72,22 @@
 	<!-- Initialize the jQuery. -->
 	<script src="vendor/js/jquery.min.js"></script>
 
+	<!-- Initialize things. -->
+	<script src='https://maps.google.com/maps/api/js?sensor=false'></script>
+
 	<!-- Initialize the AngularJS. -->
 	<script src="vendor/js/angular.min.js"></script>
 	<script src="vendor/js/angular-route.min.js"></script>
+	<script src="vendor/js/angular-animate.min.js"></script>
+	<script src="vendor/js/ng-map.min.js"></script>
+	<script src="vendor/js/underscore-min.js"></script>
 	<!-- Initialize the Apps. -->
 	<script src="app/app.js"></script>
+	<!-- Apps Controller. -->
 	<script src="app/controllers/controller.js"></script>
+	<!-- Apps Directive. -->
 	<script src="app/directives/directive.js"></script>
+	<!-- Apps Factory. -->
 	<script src="app/factories/factory.js"></script>
 
 	<!-- Initialize the Foundation JS. -->
