@@ -15,40 +15,62 @@
     </info-window>
 </map>
 
-<div class="row">
-	<div class="medium-12 column">
-		<h1>{{ detailsData.name }}</h1>
-		<p>{{ detailsData.description }}</p>
+<div class="section details-title">
+	<div class="row">
+		<div class="medium-12 column">
+			<h1>{{ detailsData.name }}</h1>
+			<p>{{ detailsData.description }}</p>
+		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="medium-12 column">
-		<h3>Progress</h3>
-		<p>{{ detailsData.progress }}</p>
-		<h3>Status</h3>
-		<p>{{ detailsData.status }}</p>
+<div class="section details-progress">
+	<div class="row">
+		<div class="medium-12 column">
+			<div class="left">
+				<h3><small>STATUS: {{ detailsData.status | uppercase }}</small></h3>
+			</div>
+			<div class="right">
+				<h3><small>{{ detailsData.progress }}%</small></h3>
+			</div>
+			<div style="clear:both"></div>
+
+			<div ng-if="detailsData.status == 'discontinue'">
+				<div class="progress large-12 alert round">
+				  	<span class="meter" style="width: {{ detailsData.progress }}%"></span>
+				</div>
+			</div>
+			<div ng-if="detailsData.status != 'discontinue'">
+				<div class="progress large-12 success round">
+				  	<span class="meter" style="width: {{ detailsData.progress }}%"></span>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="medium-9 column">
-		<h3>Description</h3>
-		<p>{{ detailsData.long_desc }}</p>
-	</div>
-	<div class="medium-3 column">
-		<h3>Initiator</h3>
-		<p>{{ detailsData.initiator }}</p>
-		<h3>Funding</h3>
-		<p>{{ detailsData.funding }}</p>
+<div class="section details-info">
+	<div class="row">
+		<div class="medium-9 column">
+			<h3>Description</h3>
+			<p>{{ detailsData.long_desc }}</p>
+		</div>
+		<div class="medium-3 column">
+			<h3>Initiator</h3>
+			<p>{{ detailsData.initiator }}</p>
+			<h3>Funding</h3>
+			<p>{{ detailsData.funding }}</p>
+		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="medium-12 column">
-		<h3>Photos</h3>
-		<ul>
-			<li ng-repeat="photo in detailsData.photos"><img src="{{ photo }}" /></li>
-		</ul>
+<div class="section details-photos">
+	<div class="row">
+		<div class="medium-12 column">
+			<h3>Photos</h3>
+			<ul>
+				<li ng-repeat="photo in detailsData.photos"><img style="width:200px;" src="{{ photo }}" /></li>
+			</ul>
+		</div>
 	</div>
 </div>
