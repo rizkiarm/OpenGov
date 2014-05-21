@@ -13,7 +13,7 @@ OpenGov.config(function($routeProvider){
 		templateUrl : 'app/views/democracy.html',
 		controller : 'DemocracyController'
 	});
-	$routeProvider.when('/data/:id/details', {
+	$routeProvider.when('/data/:dataID/details', {
 		templateUrl : 'app/views/details.html',
 		controller : 'DetailsController'
 	});

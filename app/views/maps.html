@@ -1,1 +1,14 @@
-<map style="width:100%;height:500px;display:block;" zoom="5" center="{{ map.latlng }}" on-click="setCenter()" tilt="0" />  
+<map style="width:100%;height:500px;display:block;" 
+	zoom-control="false" 
+	zoom="{{ map.zoom }}" 
+	center="{{ map.latlng }}" 
+	on-click="setCenter()" 
+	tilt="0">
+
+	<marker ng-repeat="dat in mapdata" id="{{ dat.id }}" position="{{ dat.latlng }}" title="{{ dat.name }}" on-mouseover="showInfoWindow(event, 'marker-info', { mapinfo: mapdata[ {{dat.id}} ] } )" on-click="showDetails()"></marker>
+	
+	<info-window id="marker-info">
+        <h1>[[mapinfo.name]]</h1>
+        <p>[[mapinfo.description]]</p>
+    </info-window>
+</map>
