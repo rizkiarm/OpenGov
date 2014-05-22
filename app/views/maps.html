@@ -5,10 +5,20 @@
 	on-click="setCenter()" 
 	tilt="0">
 
-	<marker ng-repeat="dat in mapdata" id="{{ dat.id }}" position="{{ dat.latlng }}" title="{{ dat.name }}" on-mouseover="showInfoWindow(event, 'marker-info', { mapinfo: mapdata[ {{dat.id}} ] } )" on-click="showDetails()"></marker>
+	<marker ng-repeat="dat in mapdata | filter:filter.name" id="{{ dat.id }}" position="{{ dat.latlng }}" title="{{ dat.name }}" on-mouseover="showInfoWindow(event, 'marker-info', { mapinfo: mapdata[ {{dat.id}} ] } )" on-click="showDetails()"></marker>
 	
 	<info-window id="marker-info">
         <h1>[[mapinfo.name]]</h1>
         <p>[[mapinfo.description]]</p>
     </info-window>
 </map>
+
+<div class="row">
+	<div class="medium-12 column">
+		<input type="text" ng-model="filter.name"></input>
+	</div>
+</div>
+
+<ul>
+	<li ng-repeat="dat in mapdata | filter:filter.name">{{ dat.name }}}</li>
+</ul>
