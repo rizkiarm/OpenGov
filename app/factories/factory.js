@@ -34,7 +34,8 @@ OpenGov.factory('DataFactory', function(){
 			progress : '30',
 			status : 'on progress',
 			photos : [
-				'http://setkab.go.id/media/article/images/2013/05/02/m/r/mrt-jakarta.jpg'
+				'http://setkab.go.id/media/article/images/2013/05/02/m/r/mrt-jakarta.jpg',
+				'assets/images/300x300.gif'
 			]
 		},
 	];

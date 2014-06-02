@@ -142,6 +142,11 @@ table {
 	color: #fff;
 	padding: 10px 0px;
 }
+.photoList > ul > li {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
 
  /* =================================================
 	FOOTER 

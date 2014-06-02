@@ -66,11 +66,23 @@
 
 <div class="section details-photos">
 	<div class="row">
-		<div class="medium-12 column">
+		<div class="medium-12 column photoList">
 			<h2><small>Photos</small></h2>
 			<ul>
-				<li ng-repeat="photo in detailsData.photos"><img style="width:200px;" src="{{ photo }}" /></li>
+				<li ng-repeat="photo in detailsData.photos"><img style="height:200px;" src="{{ photo }}" /></li>
 			</ul>
+			<div class="photoBig"></div>
 		</div>
 	</div>
 </div>
+
+<script>
+	$(document).on('click','.photoList > ul > li',function(){
+		var url = $(this).find('img').prop('src');
+		$('.photoBig').slideUp(function(){
+			$('.photoBig').html('<img style="width:100%;" src="'+ url +'"></img>');
+			$('.photoBig').slideDown();
+		});
+
+	});
+</script>
