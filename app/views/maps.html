@@ -1,24 +1,34 @@
-<map style="width:100%;height:500px;display:block;" 
+<map style="width:100%;height:480px;display:block;" 
 	zoom-control="false" 
-	zoom="{{ map.zoom }}" 
-	center="{{ map.latlng }}" 
+	zoom="5" 
+	center="-0.703107, 117.854462" 
 	on-click="setCenter()" 
 	tilt="0">
-
-	<marker ng-repeat="dat in mapdata | filter:filter.name" id="{{ dat.id }}" position="{{ dat.latlng }}" title="{{ dat.name }}" on-mouseover="showInfoWindow(event, 'marker-info', { mapinfo: mapdata[ {{dat.id}} ] } )" on-click="showDetails()"></marker>
-	
-	<info-window id="marker-info">
-        <h1>[[mapinfo.name]]</h1>
-        <p>[[mapinfo.description]]</p>
-    </info-window>
 </map>
-
+<br />
 <div class="row">
 	<div class="medium-12 column">
-		<input type="text" ng-model="filter.name"></input>
+		<input type="text" ng-model="filter.name" ng-change="filterMap()" placeholder="Find something ..."></input>
+		<ul class="button-group filtertype">
+		    <li><a ng-click="changeFilter('all')" class="tiny button primary"><i class="fa fa-asterisk"></i> All</a></li>
+		    <li><a ng-click="changeFilter('transportation')" class="tiny button secondary"><i class="fa fa-car"></i> Transportation</a></li>
+		    <li><a ng-click="changeFilter('building')" class="tiny button secondary"><i class="fa fa-building"></i> Building</a></li>
+		    <li><a ng-click="changeFilter('government')" class="tiny button secondary"><i class="fa fa-university"></i> Government</a></li>
+		    <li><a ng-click="changeFilter('education')" class="tiny button secondary"><i class="fa fa-graduation-cap"></i> Education</a></li>
+		    <li><a ng-click="changeFilter('money')" class="tiny button secondary"><i class="fa fa-money"></i> Money</a></li>
+		    <li><a ng-click="changeFilter('medical')" class="tiny button secondary"><i class="fa fa-medkit"></i> Medical</a></li>
+		    <li><a ng-click="changeFilter('other')" class="tiny button secondary"><i class="fa fa-delicious"></i> Other</a></li>
+		 </ul>
 	</div>
 </div>
 
-<ul>
-	<li ng-repeat="dat in mapdata | filter:filter.name">{{ dat.name }}}</li>
-</ul>
+<script>
+	$('.filtertype > li > a').click(function(){
+		$('.filtertype > li > a').each(function(){
+			$(this).addClass('secondary');
+			$(this).removeClass('primary');
+		});
+		$(this).addClass('primary');
+		$(this).removeClass('secondary');
+	});
+</script>

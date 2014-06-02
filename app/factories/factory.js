@@ -10,12 +10,31 @@ OpenGov.factory('DataFactory', function(){
 			initiator : 'John Smith',
 			keyword : 'hambalang',
 			location : 'jakarta',
-			latlng : '-6.549335,106.901924',
+			lat : '-6.549335',
+			lng : '106.901924',
 			type: 'building',
 			progress : '20',
 			status : 'discontinue',
 			photos : [
 				'assets/images/300x300.gif'
+			]
+		},
+		{
+			id : 1,
+			name : 'Proyek Pembangunan MRT',
+			description : 'MRT merupakan proyek transportasi umum pemerintah provinsi DKI Jakarta dalam meningkatkan kualitas dan kuantitas perjalanan/mobilitas aktivitas masyarakat menjadi lebih andal, aman dan nyaman',
+			long_desc : 'Mass Rapid Transit (MRT) adalah sebuah proyek yang menaungi bidang transportasi umum angkutan darat di Provinsi DKI Jakarta. Bertujuan untuk mengingkatkan mobilitas dan kualitas kehidupan masyarakat, MRT Jakarta bertujuan untuk mengurangi masalah kemacetan di Ibukota dan memberikan pelayanan transportasi yang aman, nyaman, dan handal. Selain itu, MRT Jakarta juga mencoba meningkatkan kualitas kehidupan masyarakat Jakarta misalnya dari sisi polusi udara. Penggunaan sistem MRT diharapkan dapat mengurangi polusi dengan berkurangnya penggunaan kendaraan pribadi.',
+			funding : '¥125,237,000,000,-',
+			initiator : 'Pemerintah DKI Jakarta',
+			keyword : 'mrt',
+			location : 'DKI Jakarta',
+			lat : '-6.149335',
+			lng : '106.801924',
+			type: 'transportation',
+			progress : '30',
+			status : 'on progress',
+			photos : [
+				'http://setkab.go.id/media/article/images/2013/05/02/m/r/mrt-jakarta.jpg'
 			]
 		},
 	];
