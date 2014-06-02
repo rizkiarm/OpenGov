@@ -9,9 +9,9 @@ OpenGov.config(function($routeProvider){
 		templateUrl : 'app/views/maps.html',
 		controller : 'MapController'
 	});
-	$routeProvider.when('/democracy', {
-		templateUrl : 'app/views/democracy.html',
-		controller : 'DemocracyController'
+	$routeProvider.when('/contribute', {
+		templateUrl : 'app/views/contribute.html',
+		controller : 'ContributionController'
 	});
 	$routeProvider.when('/data/:dataID/details', {
 		templateUrl : 'app/views/details.html',

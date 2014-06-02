@@ -75,6 +75,6 @@ OpenGov.controller('DetailsController', function($scope, $routeParams, DataFacto
 });
 
 
-OpenGov.controller('DemocracyController', function($scope){
+OpenGov.controller('ContributionController', function($scope){
 	
 });
